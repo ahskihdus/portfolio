@@ -204,7 +204,7 @@ function showAchievement(title, description) {
     document.body.appendChild(toast);
   }
 
-  toast.innerHTML = `<h4>&#127942; ${title}</h4><p>${description}</p>`;
+  toast.innerHTML = `<h4><span class="pixel-star"></span> ${title}</h4><p>${description}</p>`;
   toast.classList.add('show');
 
   setTimeout(() => toast.classList.remove('show'), 4000);

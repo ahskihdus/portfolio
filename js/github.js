@@ -24,7 +24,7 @@ function setCachedData(key, data) {
       data,
       timestamp: Date.now()
     }));
-  } catch { /* quota exceeded — ignore */ }
+  } catch { /* quota exceeded */ }
 }
 
 async function fetchGitHub(endpoint) {
@@ -113,14 +113,14 @@ function renderRepoCard(repo) {
   card.rel = 'noopener noreferrer';
   card.innerHTML = `
     <div class="repo-name">
-      <span class="repo-icon">&#9733;</span>
+      <span class="repo-icon pixel-diamond-sm"></span>
       ${repo.name}
     </div>
     <div class="repo-desc">${desc}</div>
     <div class="repo-meta">
       ${repo.language ? `<span><span class="lang-dot" style="background:${langColor}"></span>${repo.language}</span>` : ''}
-      ${repo.stargazers_count ? `<span>&#9733; ${repo.stargazers_count}</span>` : ''}
-      ${repo.forks_count ? `<span>&#9741; ${repo.forks_count}</span>` : ''}
+      ${repo.stargazers_count ? `<span><span class="pixel-diamond-sm"></span> ${repo.stargazers_count}</span>` : ''}
+      ${repo.forks_count ? `<span><span class="pixel-diamond-sm"></span> ${repo.forks_count}</span>` : ''}
     </div>
   `;
   return card;

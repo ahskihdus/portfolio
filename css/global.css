@@ -646,3 +646,64 @@ p {
   .container { padding: 0 0.75rem; }
   .pixel-card { padding: 1rem; }
 }
+
+/* ─── Custom pixel icons (replacing emoji) ─── */
+.pixel-square {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: var(--primary);
+  box-shadow:
+    4px 0 0 var(--secondary),
+    0 4px 0 var(--accent),
+    4px 4px 0 var(--primary-light);
+  vertical-align: middle;
+}
+
+.pixel-diamond {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: var(--primary);
+  transform: rotate(45deg);
+  vertical-align: middle;
+  margin-right: 0.25rem;
+}
+
+.pixel-diamond-sm {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--primary-light);
+  transform: rotate(45deg);
+  vertical-align: middle;
+}
+
+.pixel-star {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.pixel-star::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 12px;
+  height: 4px;
+  background: var(--primary);
+  box-shadow: 0 4px 0 var(--primary);
+}
+
+.pixel-star::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 4px;
+  width: 4px;
+  height: 12px;
+  background: var(--primary);
+}
