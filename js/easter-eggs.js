@@ -149,9 +149,9 @@ function handleTerminalInput(e) {
 
   const commands = {
     help: 'Commands: help, about, skills, projects, contact, clear, exit, neofetch',
-    about: 'Sudhiksha Sadige\nCS Major @ University of Oklahoma\nMinors: Data Analytics & MIS\nCertificate: Data Science\n\nPassionate about Software Engineering, AI/ML,\nCybersecurity, and emerging tech.',
-    skills: 'Languages: Python, Java, JavaScript, C, C++, HTML, CSS, SQL\nTools: Git, GitHub, VS Code, Postman, Claude, Wireshark\nAreas: Software Dev, Cybersecurity, Data Analytics, AI/ML',
-    projects: '1. Timestamp - 2D historical era game\n2. AI/ML Club Website - Club web presence\n3. CANSEC CTF - 2nd place finish\n4. Seed Vault - Indigenous document archive\n5. HTML/CSS Calculator',
+    about: 'Sudhiksha Sadige\nHonors CS Major @ University of Oklahoma\nMinors: Data Analytics & MIS\nCertificate: Data Science\nPresident, AI/ML Club\n\nPassionate about Software Engineering, AI/ML,\nCybersecurity, and emerging tech.',
+    skills: 'Languages: Java, Python, C, C++, HTML/CSS, JavaScript,\n          TypeScript, SQL, PHP\nTools: Git, GitHub, VS Code, Microsoft Office, Cerner,\n       SharePoint, Eclipse, Adobe, Wireshark, L2L, Power BI\nAreas: Software Dev, Cybersecurity, Data Analytics, AI/ML',
+    projects: '1. Timestamp - 2D historical era game\n2. Seed Vault - Indigenous document archive\n3. CANSEC CTF - 2nd place finish\n4. AI/ML Club Website - Club web presence\n5. Refined Vehicles - BPA competition website\n6. Data Analytics Projects - Analysis & visualization',
     contact: 'GitHub:   github.com/ahskihdus\nLinkedIn: linkedin.com/in/sudhiksha-sadige\nEmail:    ssadige14115@gmail.com',
     clear: '__CLEAR__',
     exit: '__EXIT__',
