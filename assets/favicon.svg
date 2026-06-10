@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Pixel-art "S" for Sudhiksha -->
+  <rect x="8" y="4" width="4" height="4" fill="#7C3AED"/>
+  <rect x="12" y="4" width="4" height="4" fill="#7C3AED"/>
+  <rect x="16" y="4" width="4" height="4" fill="#7C3AED"/>
+  <rect x="20" y="4" width="4" height="4" fill="#7C3AED"/>
+  <rect x="4" y="8" width="4" height="4" fill="#7C3AED"/>
+  <rect x="8" y="8" width="4" height="4" fill="#5B21B6"/>
+  <rect x="4" y="12" width="4" height="4" fill="#7C3AED"/>
+  <rect x="8" y="12" width="4" height="4" fill="#3B82F6"/>
+  <rect x="12" y="12" width="4" height="4" fill="#3B82F6"/>
+  <rect x="16" y="12" width="4" height="4" fill="#3B82F6"/>
+  <rect x="20" y="16" width="4" height="4" fill="#3B82F6"/>
+  <rect x="24" y="16" width="4" height="4" fill="#06B6D4"/>
+  <rect x="20" y="20" width="4" height="4" fill="#06B6D4"/>
+  <rect x="24" y="20" width="4" height="4" fill="#5B21B6"/>
+  <rect x="4" y="24" width="4" height="4" fill="#7C3AED"/>
+  <rect x="8" y="24" width="4" height="4" fill="#7C3AED"/>
+  <rect x="12" y="24" width="4" height="4" fill="#7C3AED"/>
+  <rect x="16" y="24" width="4" height="4" fill="#7C3AED"/>
+  <rect x="20" y="24" width="4" height="4" fill="#5B21B6"/>
+</svg>

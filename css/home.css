@@ -1,0 +1,327 @@
+/* ─── Hero ─── */
+.hero {
+  text-align: center;
+  padding: 4rem 0 3rem;
+  position: relative;
+}
+
+.hero-name {
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.hero-name .cursor-blink {
+  display: inline-block;
+  width: 4px;
+  height: 2rem;
+  background: var(--primary);
+  margin-left: 0.25rem;
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.hero-headline {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.hero-headline .divider {
+  color: var(--primary-light);
+  margin: 0 0.25rem;
+}
+
+.hero-intro {
+  font-size: 1rem;
+  color: var(--text);
+  max-width: 650px;
+  margin: 0 auto 2rem;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Pixel decorations around hero */
+.hero-pixels {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hero-pixel {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  opacity: 0.3;
+  animation: float 6s ease-in-out infinite;
+}
+
+.hero-pixel:nth-child(1) { top: 15%; left: 10%; background: var(--primary); animation-delay: 0s; }
+.hero-pixel:nth-child(2) { top: 25%; right: 12%; background: var(--secondary); animation-delay: 1s; }
+.hero-pixel:nth-child(3) { bottom: 20%; left: 15%; background: var(--accent); animation-delay: 2s; }
+.hero-pixel:nth-child(4) { top: 40%; left: 5%; background: var(--primary-light); animation-delay: 0.5s; width: 6px; height: 6px; }
+.hero-pixel:nth-child(5) { bottom: 30%; right: 8%; background: var(--secondary); animation-delay: 1.5s; width: 10px; height: 10px; }
+.hero-pixel:nth-child(6) { top: 60%; right: 20%; background: var(--primary); animation-delay: 3s; width: 6px; height: 6px; }
+.hero-pixel:nth-child(7) { top: 10%; left: 40%; background: var(--accent); animation-delay: 2.5s; width: 4px; height: 4px; }
+.hero-pixel:nth-child(8) { bottom: 10%; left: 35%; background: var(--border); animation-delay: 4s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-15px) rotate(90deg); }
+  50% { transform: translateY(-5px) rotate(180deg); }
+  75% { transform: translateY(-20px) rotate(270deg); }
+}
+
+/* ─── GitHub Stats ─── */
+.github-stats {
+  padding: 3rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: var(--bg-card);
+  border: var(--pixel-border) solid var(--border);
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+  text-align: center;
+  transition: all var(--transition);
+}
+
+.stat-card:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: translate(-2px, -2px);
+}
+
+.stat-number {
+  font-family: var(--font-pixel);
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* Contribution graph */
+.contrib-graph {
+  background: var(--bg-card);
+  border: var(--pixel-border) solid var(--border);
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.contrib-graph img {
+  max-width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+/* ─── Current Focus ─── */
+.focus-section {
+  padding: 3rem 0;
+}
+
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.focus-card {
+  background: var(--bg-card);
+  border: var(--pixel-border) solid var(--border);
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+  text-align: center;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.focus-card:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: translate(-2px, -2px);
+}
+
+.focus-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.focus-card:nth-child(1)::after { background: var(--primary); }
+.focus-card:nth-child(2)::after { background: var(--secondary); }
+.focus-card:nth-child(3)::after { background: var(--accent); }
+.focus-card:nth-child(4)::after { background: #F59E0B; }
+.focus-card:nth-child(5)::after { background: #10B981; }
+
+.focus-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.focus-card h3 {
+  font-size: 0.55rem;
+  margin-bottom: 0.5rem;
+}
+
+.focus-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ─── Latest Repos ─── */
+.repos-section {
+  padding: 3rem 0;
+}
+
+.repos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.repo-card {
+  background: var(--bg-card);
+  border: var(--pixel-border) solid var(--border);
+  box-shadow: var(--card-shadow);
+  padding: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.repo-card:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: translate(-2px, -2px);
+  border-color: var(--primary-light);
+}
+
+.repo-name {
+  font-family: var(--font-pixel);
+  font-size: 0.55rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.repo-name .repo-icon {
+  color: var(--text-muted);
+}
+
+.repo-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  flex: 1;
+}
+
+.repo-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+.repo-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.lang-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 0;
+  display: inline-block;
+}
+
+/* ─── Particles canvas ─── */
+#particles-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 0;
+  }
+
+  .hero-name {
+    font-size: 1.25rem;
+  }
+
+  .hero-headline {
+    font-size: 0.9rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .focus-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .repos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-name {
+    font-size: 1rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .focus-grid {
+    grid-template-columns: 1fr;
+  }
+}

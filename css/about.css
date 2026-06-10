@@ -1,0 +1,202 @@
+/* ─── About page ─── */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.about-story {
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.about-story p {
+  margin-bottom: 1.25rem;
+}
+
+.about-story .highlight {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.about-image-area {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Education card */
+.education-card {
+  background: var(--bg-card);
+  border: var(--pixel-border) solid var(--border);
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+}
+
+.education-card h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.edu-school {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.edu-degree {
+  font-size: 0.95rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.edu-details {
+  list-style: none;
+  padding: 0;
+}
+
+.edu-details li {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding: 0.35rem 0;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.edu-details li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: var(--primary-light);
+}
+
+/* Career interests */
+.interests-section {
+  margin-top: 2rem;
+}
+
+.interests-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.interest-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  background: var(--bg-card);
+  border: 3px solid var(--border);
+  box-shadow: 3px 3px 0px var(--border-light);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+  transition: all var(--transition);
+}
+
+.interest-tag:hover {
+  border-color: var(--primary-light);
+  box-shadow: 3px 3px 0px var(--primary-light);
+  color: var(--primary);
+}
+
+.interest-tag .tag-icon {
+  font-size: 1rem;
+}
+
+/* Personal interests */
+.personal-section {
+  margin-top: 3rem;
+}
+
+.personal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.personal-card {
+  background: var(--bg-card);
+  border: var(--pixel-border) solid var(--border);
+  box-shadow: var(--card-shadow);
+  padding: 1.25rem;
+  text-align: center;
+  transition: all var(--transition);
+}
+
+.personal-card:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: translate(-2px, -2px);
+}
+
+.personal-card .card-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.personal-card h3 {
+  font-size: 0.55rem;
+  margin-bottom: 0.25rem;
+}
+
+.personal-card p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Aspiration quote */
+.aspiration-box {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(59, 130, 246, 0.05));
+  border: var(--pixel-border) solid var(--border);
+  box-shadow: var(--card-shadow);
+  padding: 2rem;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.aspiration-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+}
+
+.aspiration-box h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.aspiration-box p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text);
+  font-style: italic;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .personal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .personal-grid {
+    grid-template-columns: 1fr;
+  }
+}
